@@ -1,19 +1,14 @@
-# Deploy / public URL
+﻿# Deploy
 
-## Live now (project Pages)
+**Live:** https://tiwarishweta03.github.io/
+**Repo:** https://github.com/tiwarishweta03/tiwarishweta03.github.io
+**Pages:** main → /docs
 
-**https://tiwarishweta03.github.io/Tiwarishweta/**
+```bash
+npm run build:pages
+git add docs
+git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "chore: publish docs"
+git push origin main
+```
 
-GitHub Pages → Deploy from a branch → `main` → `/docs` → Save.
-
-## Want root URL: https://tiwarishweta03.github.io
-
-GitHub only serves that URL from a repo named **`tiwarishweta03.github.io`** owned by **tiwarishweta03**.
-
-Collaborator `lilkunal` cannot create that repo. On the **tiwarishweta03** account:
-
-1. Rename `Tiwarishweta` → `tiwarishweta03.github.io`  
-   (Settings → General → Repository name), **or** create `tiwarishweta03.github.io` and push this project.
-2. In this project, set Vite `base` to `'/'` (remove `/Tiwarishweta/`).
-3. Rebuild into `docs/` (or deploy with GitHub Actions) and set Pages to `/docs` or Actions.
-4. Share: **https://tiwarishweta03.github.io**
+Always keep `index.vite.html` as the Vite source. `npm run dev` restores it to `index.html`.

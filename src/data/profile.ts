@@ -1,3 +1,9 @@
+const asset = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/'
+  const normalized = path.replace(/^\/+/, '')
+  return `${base}${normalized}`
+}
+
 export const profile = {
   name: 'Shweta Tiwari',
   brand: 'SHWETA TIWARI',
@@ -10,8 +16,8 @@ export const profile = {
   phoneHref: 'tel:+919368504295',
   email: 'tiwarishweta1103@gmail.com',
   emailHref: 'mailto:tiwarishweta1103@gmail.com?subject=Opportunity%20for%20Shweta%20Tiwari',
-  resumePath: '/ShwetaTiwariResume2026.pdf',
-  resumeUrl: '/ShwetaTiwariResume2026.pdf',
+  resumePath: asset('ShwetaTiwariResume2026.pdf'),
+  resumeUrl: asset('ShwetaTiwariResume2026.pdf'),
   whatsappHref: `https://wa.me/919368504295?text=${encodeURIComponent('Hi Shweta, I found your portfolio and would like to discuss an HR opportunity.')}`,
   summary:
     'HR Business Partner with 4+ years driving talent management, organizational development, employee engagement, and learning across manufacturing and corporate environments. Partners with business leaders on people strategies that support growth, capability, and retention — currently deepening Digital HR & AI-driven analytics at XLRI Jamshedpur.',
@@ -22,7 +28,7 @@ export const profile = {
       handle: 'shweta-tiwari-0308',
       href: 'https://www.linkedin.com/in/shweta-tiwari-0308/',
       url: 'https://www.linkedin.com/in/shweta-tiwari-0308/',
-      thumbnail: '/social/linkedin.svg',
+      thumbnail: asset('social/linkedin.svg'),
       description:
         'The professional home for her HRBP journey — leadership notes, OD thinking, campus talent work, and updates recruiters actually scan. Follow for signal, not noise.',
       blurb: 'Career, capability, and people leadership in public.',
@@ -35,7 +41,7 @@ export const profile = {
       handle: '@ishraq_______',
       href: 'https://www.instagram.com/ishraq_______/',
       url: 'https://www.instagram.com/ishraq_______/',
-      thumbnail: '/social/instagram.svg',
+      thumbnail: asset('social/instagram.svg'),
       description:
         'A quieter lens beyond the boardroom — culture, calm, and the human texture that makes great workplaces feel real. The side of Shweta that hiring managers remember.',
       blurb: 'Personal rhythm, visual storytelling, everyday presence.',
@@ -48,7 +54,7 @@ export const profile = {
       handle: 'shweta.tiwari.3572',
       href: 'https://www.facebook.com/shweta.tiwari.3572',
       url: 'https://www.facebook.com/shweta.tiwari.3572',
-      thumbnail: '/social/facebook.svg',
+      thumbnail: asset('social/facebook.svg'),
       description:
         'Community updates, celebrations, and long-form connections with colleagues, campus cohorts, and people who have built teams with her.',
       blurb: 'Network, milestones, and community threads.',

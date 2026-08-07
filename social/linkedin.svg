@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="LinkedIn preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A66C2"/>
+      <stop offset="55%" stop-color="#084d91"/>
+      <stop offset="100%" stop-color="#0b0a09"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#d4b37a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#d4b37a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <rect width="640" height="400" fill="url(#glow)"/>
+  <circle cx="520" cy="90" r="70" fill="#ffffff" fill-opacity="0.08"/>
+  <circle cx="120" cy="320" r="90" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="48" y="86" fill="#ffffff" font-family="Georgia, serif" font-size="28" letter-spacing="4">LINKEDIN</text>
+  <text x="48" y="180" fill="#ffffff" font-family="Georgia, serif" font-size="54" font-weight="600">Shweta Tiwari</text>
+  <text x="48" y="228" fill="#d4b37a" font-family="Arial, sans-serif" font-size="20">HR Business Partner · OD &amp; Engagement</text>
+  <rect x="48" y="270" width="180" height="44" rx="22" fill="#ffffff"/>
+  <text x="74" y="298" fill="#0A66C2" font-family="Arial, sans-serif" font-size="16" font-weight="700">VIEW PROFILE</text>
+  <text x="48" y="360" fill="#ffffff" fill-opacity="0.7" font-family="Arial, sans-serif" font-size="14">linkedin.com/in/shweta-tiwari-0308</text>
+</svg>
