@@ -42,7 +42,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-5 md:px-8 md:py-4">
         <a
           href="#top"
-          className="min-w-0 truncate font-display text-lg tracking-tight text-text sm:text-xl md:text-2xl"
+          className="font-brand min-w-0 truncate text-lg font-medium tracking-tight text-text sm:text-xl md:text-2xl"
         >
           {profile.brand}
         </a>
@@ -59,11 +59,10 @@ export function Nav() {
           ))}
           <ThemeToggle />
           <a
-            href={profile.resumeUrl}
-            download
+            href={profile.emailHref}
             className="rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-bg transition hover:bg-primary-deep"
           >
-            Download CV
+            Hire me
           </a>
         </nav>
 
@@ -95,11 +94,17 @@ export function Nav() {
               </a>
             ))}
             <a
-              href={profile.resumeUrl}
-              download
+              href={profile.emailHref}
               className="mt-2 rounded-full bg-primary px-4 py-3.5 text-center text-sm font-semibold text-bg"
             >
-              Download CV
+              Hire me
+            </a>
+            <a
+              href={profile.resumeUrl}
+              download
+              className="rounded-full border border-glass-border px-4 py-3 text-center text-sm font-semibold text-text"
+            >
+              Full résumé
             </a>
           </div>
         </div>

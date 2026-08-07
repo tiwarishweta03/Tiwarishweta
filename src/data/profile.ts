@@ -3,17 +3,18 @@ export const profile = {
   brand: 'SHWETA TIWARI',
   title: 'HR Business Partner',
   subtitle: 'Organizational Development & Employee Engagement Specialist',
-  tagline: 'Organizational Development & Employee Engagement Specialist',
-  availability: 'Open to opportunities',
-  location: 'Faridabad, Haryana',
+  tagline: 'People strategy that moves business forward',
+  availability: 'Open to multinational HRBP · OD · Talent roles',
+  location: 'Faridabad, Haryana · Open to relocate / hybrid',
   phone: '+91 9368504295',
   phoneHref: 'tel:+919368504295',
   email: 'tiwarishweta1103@gmail.com',
-  emailHref: 'mailto:tiwarishweta1103@gmail.com',
+  emailHref: 'mailto:tiwarishweta1103@gmail.com?subject=Opportunity%20for%20Shweta%20Tiwari',
   resumePath: '/ShwetaTiwariResume2026.pdf',
   resumeUrl: '/ShwetaTiwariResume2026.pdf',
+  whatsappHref: `https://wa.me/919368504295?text=${encodeURIComponent('Hi Shweta, I found your portfolio and would like to discuss an HR opportunity.')}`,
   summary:
-    'HR Business Partner with 4+ years of experience driving talent management, organizational development, employee engagement, and learning initiatives across manufacturing and corporate environments. Partners with business leaders on people strategies that support growth, capability, and retention — currently deepening Digital HR & AI-driven analytics at XLRI Jamshedpur.',
+    'HR Business Partner with 4+ years driving talent management, organizational development, employee engagement, and learning across manufacturing and corporate environments. Partners with business leaders on people strategies that support growth, capability, and retention — currently deepening Digital HR & AI-driven analytics at XLRI Jamshedpur.',
   socials: [
     {
       id: 'linkedin',
@@ -22,9 +23,10 @@ export const profile = {
       href: 'https://www.linkedin.com/in/shweta-tiwari-0308/',
       url: 'https://www.linkedin.com/in/shweta-tiwari-0308/',
       thumbnail: '/social/linkedin.svg',
-      description: 'Professional updates, HR insights, and career journey.',
-      blurb: 'Professional updates, HR insights, and career journey.',
-      cta: 'View profile',
+      description:
+        'The professional home for her HRBP journey — leadership notes, OD thinking, campus talent work, and updates recruiters actually scan. Follow for signal, not noise.',
+      blurb: 'Career, capability, and people leadership in public.',
+      cta: 'View full profile',
       accent: '#0A66C2',
     },
     {
@@ -34,9 +36,10 @@ export const profile = {
       href: 'https://www.instagram.com/ishraq_______/',
       url: 'https://www.instagram.com/ishraq_______/',
       thumbnail: '/social/instagram.svg',
-      description: 'A personal lens — moments beyond the workplace.',
-      blurb: 'A personal lens — moments beyond the workplace.',
-      cta: 'Follow',
+      description:
+        'A quieter lens beyond the boardroom — culture, calm, and the human texture that makes great workplaces feel real. The side of Shweta that hiring managers remember.',
+      blurb: 'Personal rhythm, visual storytelling, everyday presence.',
+      cta: 'Follow along',
       accent: '#E1306C',
     },
     {
@@ -46,9 +49,10 @@ export const profile = {
       href: 'https://www.facebook.com/shweta.tiwari.3572',
       url: 'https://www.facebook.com/shweta.tiwari.3572',
       thumbnail: '/social/facebook.svg',
-      description: 'Community, connections, and everyday updates.',
-      blurb: 'Community, connections, and everyday updates.',
-      cta: 'Connect',
+      description:
+        'Community updates, celebrations, and long-form connections with colleagues, campus cohorts, and people who have built teams with her.',
+      blurb: 'Network, milestones, and community threads.',
+      cta: 'Connect here',
       accent: '#1877F2',
     },
   ],
@@ -60,36 +64,36 @@ export const languages = [
 ] as const
 
 export const metrics = [
-  { value: '4+', label: 'Years in HRBP' },
-  { value: '1', label: 'Excellence Award' },
-  { value: '3+', label: 'Flagship L&D programs' },
-  { value: 'XLRI', label: 'Digital HR track' },
+  { value: '4+', label: 'Years in HRBP', detail: 'Manufacturing & corporate people leadership' },
+  { value: '1', label: 'Excellence Award', detail: 'Young talent & campus pipelines' },
+  { value: '3+', label: 'Flagship L&D programs', detail: 'EKCAP · Udaan · Campus Capability' },
+  { value: 'XLRI', label: 'Digital HR track', detail: 'AI-driven HR analytics in progress' },
 ] as const
 
 export const achievements = [
   {
     title: 'Excellence Award',
     subtitle: 'Young talent & campus pipelines',
-    body: 'Recognized for promoting young talent and leading campus development initiatives that strengthened future leadership pipelines.',
+    body: 'Recognized for promoting young talent and leading campus development initiatives that strengthened future leadership pipelines across the organization.',
     tone: 'gold' as const,
   },
   {
     title: 'Leadership Connect',
     subtitle: 'Employee engagement',
-    body: 'Delivered Leadership Connect, Career Pathing, and Aspirational Achievement programs that lifted employee experience and engagement.',
-    tone: 'teal' as const,
+    body: 'Delivered Leadership Connect, Career Pathing, and Aspirational Achievement programs that lifted employee experience and workforce engagement.',
+    tone: 'mist' as const,
   },
   {
     title: 'EKCAP · Udaan · Campus Capability',
     subtitle: 'Capability building',
     body: 'Led capability development programs that improved workforce readiness and business performance across functions.',
-    tone: 'coral' as const,
+    tone: 'clay' as const,
   },
   {
     title: 'Diversity & Inclusion',
     subtitle: 'Inclusive culture',
-    body: 'Drove DEI initiatives focused on workplace inclusivity and diverse talent representation across the organization.',
-    tone: 'amber' as const,
+    body: 'Drove DEI initiatives focused on workplace inclusivity and diverse talent representation — culture work that shows up in retention and belonging.',
+    tone: 'ember' as const,
   },
 ]
 
@@ -122,18 +126,21 @@ export const education = [
       'Executive Development Programme — Digital HR Transformation & AI-Driven HR Analytics',
     period: '2026 – 2027',
     place: 'Jamshedpur, India',
+    note: 'Building fluency in digital HR systems, people analytics, and AI-assisted workforce decisions — the next layer for enterprise HRBP work.',
   },
   {
     school: 'Amity University',
     degree: 'MBA — Human Resource Management',
     period: '2022',
     place: 'Noida, India',
+    note: 'Graduate foundation in talent systems, organizational behavior, and strategic HR — translated quickly into manufacturing HRBP practice.',
   },
   {
     school: 'MIET',
     degree: 'Bachelor of Technology (B.Tech)',
     period: '2019',
     place: 'India',
+    note: 'Engineering discipline that still shapes her approach: structured problem-solving, process clarity, and comfort with operational environments.',
   },
 ] as const
 

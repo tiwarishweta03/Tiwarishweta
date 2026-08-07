@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-glass-border px-5 py-8 md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-text-muted md:flex-row md:items-center md:justify-between">
-        <p className="font-display text-lg text-text">{profile.brand}</p>
+        <p className="font-brand text-xl tracking-tight text-text">{profile.brand}</p>
         <p>
           © {new Date().getFullYear()} {profile.name} · Open to opportunities
         </p>

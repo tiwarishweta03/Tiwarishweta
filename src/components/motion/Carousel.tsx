@@ -29,13 +29,25 @@ export function Carousel({
   children,
   className,
   initialIndex = 0,
+  index: controlledIndex,
+  onIndexChange,
 }: {
   children: ReactNode
   className?: string
   initialIndex?: number
+  index?: number
+  onIndexChange?: (n: number) => void
 }) {
-  const [index, setIndex] = useState(initialIndex)
+  const [internalIndex, setInternalIndex] = useState(initialIndex)
   const [itemsCount, setItemsCount] = useState(0)
+  const isControlled = controlledIndex !== undefined
+  const index = isControlled ? controlledIndex : internalIndex
+
+  const setIndex = (n: number) => {
+    if (!isControlled) setInternalIndex(n)
+    onIndexChange?.(n)
+  }
+
   const childArray = Children.toArray(children)
   const isSimple = childArray.every(
     (child) =>

@@ -32,13 +32,16 @@ export function Experience() {
   }, [])
 
   return (
-    <section id="experience" className="mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:px-8 md:py-28">
+    <section
+      id="experience"
+      className="mx-auto max-w-6xl px-4 py-16 sm:px-5 sm:py-20 md:px-8 md:py-28"
+    >
       <AnimeReveal>
         <p className="text-xs uppercase tracking-[0.22em] text-primary" data-anime-item>
           Experience
         </p>
         <h2
-          className="mt-3 font-display text-[clamp(1.85rem,6vw,3rem)] text-text"
+          className="mt-3 font-brand text-[clamp(2rem,6vw,3.4rem)] font-medium tracking-tight text-text"
           data-anime-item
         >
           Where the work happens.
@@ -46,11 +49,16 @@ export function Experience() {
       </AnimeReveal>
 
       <AnimeReveal className="mt-10" delay={80}>
-        <article className="glass-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-6 md:p-10" data-anime-item>
+        <article
+          className="glass-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-6 md:p-10"
+          data-anime-item
+        >
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p className="text-sm text-primary">{experience.period}</p>
-              <h3 className="mt-2 font-display text-2xl md:text-3xl">{experience.role}</h3>
+              <h3 className="mt-2 font-brand text-2xl tracking-tight md:text-3xl">
+                {experience.role}
+              </h3>
               <p className="mt-1 text-text-muted">{experience.company}</p>
             </div>
             <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs uppercase tracking-[0.16em] text-primary">
@@ -76,7 +84,7 @@ export function Experience() {
                 <span
                   key={program}
                   data-anime-hover
-                  className="rounded-full bg-secondary/25 px-3 py-1.5 text-sm text-text"
+                  className="rounded-full bg-secondary/20 px-3 py-1.5 text-sm text-text"
                 >
                   {program}
                 </span>
@@ -107,17 +115,29 @@ export function Experience() {
         <p className="text-xs uppercase tracking-[0.22em] text-primary" data-anime-item>
           Education
         </p>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <h3
+          className="mt-3 max-w-2xl font-brand text-[clamp(1.6rem,4vw,2.4rem)] font-medium tracking-tight text-text"
+          data-anime-item
+        >
+          Credentials that compound — engineering rigor, HR strategy, digital HR future.
+        </h3>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text-muted sm:text-[15px]" data-anime-item>
+          From B.Tech foundations to an MBA in Human Resource Management, and now XLRI&apos;s
+          executive track in Digital HR Transformation &amp; AI-Driven Analytics — each chapter
+          was chosen to deepen how she partners with business leaders at scale.
+        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
           {education.map((ed) => (
             <div
               key={ed.school + ed.degree}
               data-anime-item
               data-anime-hover
-              className="glass-panel rounded-3xl p-5"
+              className="glass-panel flex flex-col rounded-3xl p-5"
             >
               <p className="text-xs uppercase tracking-[0.16em] text-primary">{ed.period}</p>
-              <h3 className="mt-3 font-display text-xl text-text">{ed.school}</h3>
+              <h4 className="mt-3 font-brand text-xl tracking-tight text-text">{ed.school}</h4>
               <p className="mt-2 text-sm leading-relaxed text-text-muted">{ed.degree}</p>
+              <p className="mt-4 flex-1 text-sm leading-relaxed text-text/90">{ed.note}</p>
               <p className="mt-4 text-xs text-text-muted">{ed.place}</p>
             </div>
           ))}
