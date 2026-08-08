@@ -6,7 +6,7 @@ const asset = (path: string) => {
 
 export const profile = {
   name: 'Shweta Tiwari',
-  brand: 'Shweta',
+  brand: 'Shweta Tiwari',
   title: 'HR Business Partner',
   subtitle: 'Organizational Development & Employee Engagement Specialist',
   tagline: 'People strategy that moves business forward',
@@ -84,28 +84,24 @@ export const achievements = [
     subtitle: 'Young talent & campus pipelines',
     body: 'Recognized for promoting young talent and leading campus development initiatives that strengthened future leadership pipelines across the organization.',
     tone: 'gold' as const,
-    image: asset('portraits/portrait-full.png'),
   },
   {
     title: 'Leadership Connect',
     subtitle: 'Employee engagement',
     body: 'Delivered Leadership Connect, Career Pathing, and Aspirational Achievement programs that lifted employee experience and workforce engagement.',
     tone: 'mist' as const,
-    image: asset('portraits/portrait-close.png'),
   },
   {
     title: 'EKCAP · Udaan · Campus Capability',
     subtitle: 'Capability building',
     body: 'Led capability development programs that improved workforce readiness and business performance across functions.',
     tone: 'clay' as const,
-    image: asset('portraits/portrait-full.png'),
   },
   {
     title: 'Diversity & Inclusion',
     subtitle: 'Inclusive culture',
     body: 'Drove DEI initiatives focused on workplace inclusivity and diverse talent representation — culture work that shows up in retention and belonging.',
     tone: 'ember' as const,
-    image: asset('portraits/portrait-close.png'),
   },
 ]
 

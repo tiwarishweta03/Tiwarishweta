@@ -42,7 +42,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-5 md:px-8 md:py-4">
         <a
           href="#top"
-          className="font-brand min-w-0 truncate text-lg font-medium tracking-tight text-text sm:text-xl md:text-2xl"
+          className="font-harmond min-w-0 truncate text-xl font-semibold tracking-tight text-text sm:text-2xl md:text-[1.75rem]"
         >
           {profile.brand}
         </a>

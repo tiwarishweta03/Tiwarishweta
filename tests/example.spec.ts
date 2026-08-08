@@ -11,12 +11,12 @@ test.describe('Shweta portfolio', () => {
     await expect(page.getByRole('heading', { name: /Proof, not promises/i })).toBeVisible()
   })
 
-  test('does not repeat full name excessively in hero', async ({ page }) => {
+  test('hero shows full name large', async ({ page }) => {
     await page.goto('/')
-    const hero = page.locator('#top')
-    const text = await hero.innerText()
-    const matches = text.match(/Shweta Tiwari/gi) ?? []
-    expect(matches.length).toBeLessThanOrEqual(1)
+    const name = page.getByTestId('hero-name')
+    await expect(name).toBeVisible()
+    await expect(name).toContainText('Shweta')
+    await expect(name).toContainText('Tiwari')
   })
 
   test('does not show Faridabad or Haryana', async ({ page }) => {
@@ -26,11 +26,11 @@ test.describe('Shweta portfolio', () => {
     expect(body.toLowerCase()).not.toContain('haryana')
   })
 
-  test('proof carousel shows portrait imagery', async ({ page }) => {
+  test('proof carousel has no portrait photos', async ({ page }) => {
     await page.goto('/')
     const carousel = page.getByTestId('proof-carousel')
     await expect(carousel).toBeVisible()
-    await expect(carousel.locator('img').first()).toBeVisible()
+    await expect(carousel.locator('img')).toHaveCount(0)
   })
 
   test('theme toggle switches data-theme', async ({ page }) => {

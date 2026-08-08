@@ -20,6 +20,8 @@
   --font-display: 'Instrument Serif', 'Times New Roman', serif;
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   --font-brand: 'Cormorant Garamond', 'Instrument Serif', serif;
+  /* Harmond-inspired high-contrast display (Bodoni Moda — web-licensed twin aesthetic) */
+  --font-harmond: 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
 }
 
 /*
@@ -117,6 +119,43 @@ svg {
 
 .font-brand {
   font-family: var(--font-brand);
+}
+
+.font-harmond {
+  font-family: var(--font-harmond);
+  font-optical-sizing: auto;
+}
+
+.site-backdrop {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.site-backdrop__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1) contrast(1.05);
+  opacity: 0.14;
+  transform: scale(1.04);
+}
+
+[data-theme='dark'] .site-backdrop__img {
+  opacity: 0.1;
+}
+
+.site-backdrop__veil {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklab, var(--theme-bg) 78%, transparent);
+}
+
+[data-theme='dark'] .site-backdrop__veil {
+  background: color-mix(in oklab, var(--theme-bg) 82%, transparent);
 }
 
 .hero-atmosphere {

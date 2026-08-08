@@ -4,6 +4,13 @@ import { achievements, metrics } from '@/data/profile'
 import { cn } from '@/lib/utils'
 import { useEffect, useState } from 'react'
 
+const toneMap = {
+  gold: 'bg-gradient-to-br from-[#2d8b8b] via-[#1a2332] to-[#0f141c]',
+  mist: 'bg-gradient-to-br from-[#708090] via-[#2a3544] to-[#141a22]',
+  clay: 'bg-gradient-to-br from-[#5a6d8c] via-[#243044] to-[#121821]',
+  ember: 'bg-gradient-to-br from-[#a8dadc] via-[#2d4a52] to-[#1a2332]',
+} as const
+
 export function Impact() {
   const [index, setIndex] = useState(0)
 
@@ -17,7 +24,7 @@ export function Impact() {
   return (
     <section
       id="impact"
-      className="border-y border-glass-border bg-bg-elevated/50 py-16 sm:py-20 md:py-28"
+      className="relative border-y border-glass-border bg-bg/70 py-16 backdrop-blur-[2px] sm:py-20 md:py-28"
       data-testid="impact-section"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-5 md:px-8">
@@ -26,7 +33,7 @@ export function Impact() {
             Impact
           </p>
           <h2
-            className="mt-3 font-brand text-[clamp(2rem,6vw,3.4rem)] font-medium tracking-tight text-text"
+            className="mt-3 font-harmond text-[clamp(2.2rem,6vw,3.6rem)] font-semibold tracking-tight text-text"
             data-anime-item
           >
             Proof, not promises.
@@ -46,7 +53,7 @@ export function Impact() {
                 data-anime-hover
                 className="glass-panel rounded-2xl px-4 py-5 text-center md:rounded-3xl md:px-5 md:py-6"
               >
-                <p className="font-brand text-3xl text-primary md:text-4xl">{m.value}</p>
+                <p className="font-harmond text-3xl text-primary md:text-4xl">{m.value}</p>
                 <p className="mt-2 text-[10px] uppercase tracking-[0.14em] text-text-muted sm:text-xs">
                   {m.label}
                 </p>
@@ -61,33 +68,28 @@ export function Impact() {
               {achievements.map((item) => (
                 <article
                   key={item.title}
-                  className="relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-[1.5rem] text-white sm:min-h-[380px] sm:rounded-[1.75rem] md:min-h-[420px]"
+                  className={cn(
+                    'relative flex min-h-[280px] flex-col justify-end overflow-hidden rounded-[1.5rem] p-6 text-white sm:min-h-[340px] sm:rounded-[1.75rem] sm:p-8 md:min-h-[380px] md:p-10',
+                    toneMap[item.tone],
+                  )}
                 >
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="absolute inset-0 h-full w-full object-cover object-center grayscale"
-                  />
                   <div
-                    className={cn(
-                      'absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/15',
-                    )}
+                    className="pointer-events-none absolute -right-10 top-10 h-48 w-48 rounded-full bg-white/10 blur-3xl"
+                    aria-hidden
                   />
                   <div
                     className="pointer-events-none absolute bottom-0 left-0 h-px w-2/5 origin-left -rotate-12 bg-[var(--film-line)]"
                     aria-hidden
                   />
-                  <div className="relative z-10 p-6 sm:p-8 md:p-10">
-                    <p className="text-xs uppercase tracking-[0.22em] text-white/75">
-                      {item.subtitle}
-                    </p>
-                    <h3 className="mt-3 font-brand text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-                      {item.title}
-                    </h3>
-                    <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-[15px]">
-                      {item.body}
-                    </p>
-                  </div>
+                  <p className="text-xs uppercase tracking-[0.22em] text-white/75">
+                    {item.subtitle}
+                  </p>
+                  <h3 className="mt-3 font-harmond text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+                    {item.title}
+                  </h3>
+                  <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/90 sm:text-[15px]">
+                    {item.body}
+                  </p>
                 </article>
               ))}
             </Carousel>
