@@ -17,7 +17,7 @@ if (!existsSync(viteIndex)) {
 function publishTo(target) {
   mkdirSync(target, { recursive: true })
 
-  for (const name of ['assets', 'social']) {
+  for (const name of ['assets', 'social', 'portraits']) {
     const from = join(dist, name)
     const to = join(target, name)
     if (existsSync(to)) rmSync(to, { recursive: true, force: true })

@@ -22,56 +22,60 @@
   --font-brand: 'Cormorant Garamond', 'Instrument Serif', serif;
 }
 
+/*
+  Theme Factory: Ocean Depths (corporate trust) × Modern Minimalist grayscale
+  Tuned for B&W portrait photography + MNC hiring polish
+*/
 :root,
 [data-theme='dark'] {
-  --theme-text: #f2ebe3;
-  --theme-text-muted: #a89b8f;
-  --theme-bg: #0b0a09;
-  --theme-bg-elevated: #141210;
-  --theme-primary: #d4b37a;
-  --theme-primary-deep: #b8924f;
-  --theme-secondary: #6e8499;
-  --theme-secondary-soft: #8aa0b5;
-  --theme-accent: #c45d4a;
-  --theme-glass: rgba(255, 255, 255, 0.05);
-  --theme-glass-border: rgba(242, 235, 227, 0.12);
-  --hero-glow-1: rgba(212, 179, 122, 0.22);
-  --hero-glow-2: rgba(110, 132, 153, 0.2);
-  --hero-glow-3: rgba(196, 93, 74, 0.14);
-  --hero-base-1: #12100e;
-  --hero-base-2: #0b0a09;
-  --hero-base-3: #070606;
-  --glass-border: rgba(255, 255, 255, 0.12);
+  --theme-text: #f1faee;
+  --theme-text-muted: #a8dadc;
+  --theme-bg: #1a2332;
+  --theme-bg-elevated: #243044;
+  --theme-primary: #2d8b8b;
+  --theme-primary-deep: #246f6f;
+  --theme-secondary: #708090;
+  --theme-secondary-soft: #a8dadc;
+  --theme-accent: #d3d3d3;
+  --theme-glass: rgba(255, 255, 255, 0.06);
+  --theme-glass-border: rgba(241, 250, 238, 0.14);
+  --hero-glow-1: rgba(45, 139, 139, 0.28);
+  --hero-glow-2: rgba(168, 218, 220, 0.14);
+  --hero-glow-3: rgba(112, 128, 144, 0.18);
+  --hero-base-1: #1f2a3c;
+  --hero-base-2: #1a2332;
+  --hero-base-3: #121821;
+  --glass-border: rgba(255, 255, 255, 0.14);
   --glass-fill-1: rgba(255, 255, 255, 0.1);
   --glass-fill-2: rgba(255, 255, 255, 0.03);
-  --noise-opacity: 0.14;
-  --film-line: rgba(196, 93, 74, 0.55);
+  --noise-opacity: 0.12;
+  --film-line: rgba(168, 218, 220, 0.55);
   color-scheme: dark;
 }
 
 [data-theme='light'] {
-  --theme-text: #15131a;
-  --theme-text-muted: #5a5566;
-  --theme-bg: #eef1f6;
-  --theme-bg-elevated: #e4e8f0;
-  --theme-primary: #8a6a2a;
-  --theme-primary-deep: #6f541f;
+  --theme-text: #36454f;
+  --theme-text-muted: #708090;
+  --theme-bg: #f7f8fa;
+  --theme-bg-elevated: #eef1f4;
+  --theme-primary: #2d8b8b;
+  --theme-primary-deep: #246f6f;
   --theme-secondary: #5a6d8c;
-  --theme-secondary-soft: #6e8499;
-  --theme-accent: #b04e3d;
-  --theme-glass: rgba(255, 255, 255, 0.55);
-  --theme-glass-border: rgba(21, 19, 26, 0.1);
-  --hero-glow-1: rgba(138, 106, 42, 0.14);
-  --hero-glow-2: rgba(90, 109, 140, 0.16);
-  --hero-glow-3: rgba(176, 78, 61, 0.1);
-  --hero-base-1: #f4f6fa;
-  --hero-base-2: #eef1f6;
-  --hero-base-3: #e5e9f2;
-  --glass-border: rgba(21, 19, 26, 0.1);
-  --glass-fill-1: rgba(255, 255, 255, 0.78);
-  --glass-fill-2: rgba(255, 255, 255, 0.42);
-  --noise-opacity: 0.06;
-  --film-line: rgba(176, 78, 61, 0.4);
+  --theme-secondary-soft: #708090;
+  --theme-accent: #36454f;
+  --theme-glass: rgba(255, 255, 255, 0.72);
+  --theme-glass-border: rgba(54, 69, 79, 0.12);
+  --hero-glow-1: rgba(45, 139, 139, 0.12);
+  --hero-glow-2: rgba(112, 128, 144, 0.1);
+  --hero-glow-3: rgba(54, 69, 79, 0.06);
+  --hero-base-1: #fbfcfd;
+  --hero-base-2: #f7f8fa;
+  --hero-base-3: #eef1f4;
+  --glass-border: rgba(54, 69, 79, 0.1);
+  --glass-fill-1: rgba(255, 255, 255, 0.85);
+  --glass-fill-2: rgba(255, 255, 255, 0.45);
+  --noise-opacity: 0.05;
+  --film-line: rgba(45, 139, 139, 0.45);
   color-scheme: light;
 }
 

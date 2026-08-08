@@ -6,19 +6,21 @@ const asset = (path: string) => {
 
 export const profile = {
   name: 'Shweta Tiwari',
-  brand: 'SHWETA TIWARI',
+  brand: 'Shweta',
   title: 'HR Business Partner',
   subtitle: 'Organizational Development & Employee Engagement Specialist',
   tagline: 'People strategy that moves business forward',
   availability: 'Open to multinational HRBP · OD · Talent roles',
-  location: 'Faridabad, Haryana · Open to relocate / hybrid',
+  location: 'Open to relocate · hybrid · remote-friendly',
   phone: '+91 9368504295',
   phoneHref: 'tel:+919368504295',
   email: 'tiwarishweta1103@gmail.com',
-  emailHref: 'mailto:tiwarishweta1103@gmail.com?subject=Opportunity%20for%20Shweta%20Tiwari',
+  emailHref: 'mailto:tiwarishweta1103@gmail.com?subject=Opportunity%20%E2%80%94%20HR%20Business%20Partner',
   resumePath: asset('ShwetaTiwariResume2026.pdf'),
   resumeUrl: asset('ShwetaTiwariResume2026.pdf'),
   whatsappHref: `https://wa.me/919368504295?text=${encodeURIComponent('Hi Shweta, I found your portfolio and would like to discuss an HR opportunity.')}`,
+  portraitClose: asset('portraits/portrait-close.png'),
+  portraitFull: asset('portraits/portrait-full.png'),
   summary:
     'HR Business Partner with 4+ years driving talent management, organizational development, employee engagement, and learning across manufacturing and corporate environments. Partners with business leaders on people strategies that support growth, capability, and retention — currently deepening Digital HR & AI-driven analytics at XLRI Jamshedpur.',
   socials: [
@@ -43,7 +45,7 @@ export const profile = {
       url: 'https://www.instagram.com/ishraq_______/',
       thumbnail: asset('social/instagram.svg'),
       description:
-        'A quieter lens beyond the boardroom — culture, calm, and the human texture that makes great workplaces feel real. The side of Shweta that hiring managers remember.',
+        'A quieter lens beyond the boardroom — culture, calm, and the human texture that makes great workplaces feel real.',
       blurb: 'Personal rhythm, visual storytelling, everyday presence.',
       cta: 'Follow along',
       accent: '#E1306C',
@@ -82,24 +84,28 @@ export const achievements = [
     subtitle: 'Young talent & campus pipelines',
     body: 'Recognized for promoting young talent and leading campus development initiatives that strengthened future leadership pipelines across the organization.',
     tone: 'gold' as const,
+    image: asset('portraits/portrait-full.png'),
   },
   {
     title: 'Leadership Connect',
     subtitle: 'Employee engagement',
     body: 'Delivered Leadership Connect, Career Pathing, and Aspirational Achievement programs that lifted employee experience and workforce engagement.',
     tone: 'mist' as const,
+    image: asset('portraits/portrait-close.png'),
   },
   {
     title: 'EKCAP · Udaan · Campus Capability',
     subtitle: 'Capability building',
     body: 'Led capability development programs that improved workforce readiness and business performance across functions.',
     tone: 'clay' as const,
+    image: asset('portraits/portrait-full.png'),
   },
   {
     title: 'Diversity & Inclusion',
     subtitle: 'Inclusive culture',
     body: 'Drove DEI initiatives focused on workplace inclusivity and diverse talent representation — culture work that shows up in retention and belonging.',
     tone: 'ember' as const,
+    image: asset('portraits/portrait-close.png'),
   },
 ]
 

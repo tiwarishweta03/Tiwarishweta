@@ -20,40 +20,42 @@ export function About() {
       <AnimeReveal className="mt-10" delay={80} staggerMs={110}>
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div
-            className="glass-panel rounded-[1.5rem] p-5 sm:rounded-[2rem] sm:p-6 md:p-8"
+            className="glass-panel overflow-hidden rounded-[1.5rem] sm:rounded-[2rem]"
             data-anime-item
           >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="font-brand text-3xl tracking-tight">{profile.name}</p>
-                <p className="mt-1 text-sm text-text-muted">{profile.title}</p>
-              </div>
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 font-brand text-xl text-primary">
-                ST
-              </div>
+            <div className="relative aspect-[5/4] overflow-hidden">
+              <img
+                src={profile.portraitFull}
+                alt="Professional portrait in studio"
+                className="h-full w-full object-cover object-top grayscale"
+              />
             </div>
-            <a
-              href={profile.whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-anime-hover
-              className="mt-8 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 text-sm font-semibold text-bg transition hover:bg-primary-deep"
-            >
-              Send a message
-            </a>
-            <div className="mt-8">
-              <p className="mb-3 text-xs uppercase tracking-[0.18em] text-text-muted">
-                Languages
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {languages.map((lang) => (
-                  <span
-                    key={lang.name}
-                    className="rounded-full border border-glass-border bg-bg-elevated px-3 py-1.5 text-sm text-text-muted"
-                  >
-                    {lang.name} · {lang.level}
-                  </span>
-                ))}
+            <div className="p-5 sm:p-6 md:p-8">
+              <p className="text-sm text-primary">{profile.title}</p>
+              <p className="mt-1 text-sm text-text-muted">{profile.subtitle}</p>
+              <a
+                href={profile.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-anime-hover
+                className="mt-6 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 text-sm font-semibold text-bg transition hover:bg-primary-deep"
+              >
+                Send a message
+              </a>
+              <div className="mt-6">
+                <p className="mb-3 text-xs uppercase tracking-[0.18em] text-text-muted">
+                  Languages
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {languages.map((lang) => (
+                    <span
+                      key={lang.name}
+                      className="rounded-full border border-glass-border bg-bg-elevated px-3 py-1.5 text-sm text-text-muted"
+                    >
+                      {lang.name} · {lang.level}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

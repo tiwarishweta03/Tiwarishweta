@@ -2,7 +2,7 @@ import { ShaderBackdrop } from '@/components/ShaderBackdrop'
 import { TextShimmer } from '@/components/TextShimmer'
 import { profile } from '@/data/profile'
 import { createTimeline, prefersReducedMotion, stagger } from '@/lib/anime'
-import { ArrowUpRight, Download, MapPin } from 'lucide-react'
+import { ArrowUpRight, Download } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 
 export function Hero() {
@@ -14,13 +14,12 @@ export function Hero() {
 
     const meta = root.querySelectorAll('.hero-meta > *')
     const badge = root.querySelector('.hero-badge')
-    const name = root.querySelector('.hero-name')
     const lines = root.querySelectorAll('.hero-line')
     const ctas = root.querySelectorAll('.hero-cta')
     const panel = root.querySelector('.hero-panel')
     const footer = root.querySelectorAll('.hero-foot > *')
 
-    const all = [...meta, badge, name, ...lines, ...ctas, panel, ...footer]
+    const all = [...meta, badge, ...lines, ...ctas, panel, ...footer]
 
     if (prefersReducedMotion()) {
       all.forEach((el) => {
@@ -41,18 +40,6 @@ export function Hero() {
     if (badge) {
       tl.add(badge, { opacity: [0, 1], y: [16, 0], duration: 520 }, '-=280')
     }
-    if (name) {
-      tl.add(
-        name,
-        {
-          opacity: [0, 1],
-          y: [28, 0],
-          filter: ['blur(12px)', 'blur(0px)'],
-          duration: 900,
-        },
-        '-=240',
-      )
-    }
     if (lines.length) {
       tl.add(
         lines,
@@ -63,7 +50,7 @@ export function Hero() {
           duration: 760,
           delay: stagger(110),
         },
-        '-=480',
+        '-=240',
       )
     }
     if (ctas.length) {
@@ -102,7 +89,7 @@ export function Hero() {
       <ShaderBackdrop />
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-between px-4 pb-8 pt-24 sm:px-5 sm:pb-10 sm:pt-28 md:px-8 md:pb-14 md:pt-32">
         <div className="hero-meta grid gap-2 text-[10px] uppercase tracking-[0.18em] text-text-muted sm:text-[11px] md:grid-cols-2 md:text-xs">
-          <p className="truncate opacity-0">HR Business Partner · Faridabad</p>
+          <p className="truncate opacity-0">HR Business Partner · India</p>
           <p className="truncate opacity-0 md:text-right">
             <a href={profile.emailHref} className="transition hover:text-primary">
               {profile.email}
@@ -110,27 +97,23 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="my-8 grid items-end gap-8 sm:my-10 sm:gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="my-8 grid items-end gap-8 sm:my-10 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="min-w-0">
             <p className="hero-badge mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-glass-border bg-glass px-3 py-1.5 text-xs text-primary opacity-0 backdrop-blur-md">
               <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-primary" />
               <span className="truncate">{profile.availability}</span>
             </p>
 
-            <h1 className="hero-name font-brand film-stroke text-[clamp(2.6rem,10vw,5.75rem)] font-medium leading-[0.92] tracking-[-0.02em] text-text opacity-0">
-              {profile.brand}
-            </h1>
-
-            <p className="mt-5 max-w-xl font-display text-[clamp(1.35rem,4vw,2.15rem)] leading-snug text-text">
+            <h1 className="max-w-xl font-brand film-stroke text-[clamp(2.4rem,8vw,4.75rem)] font-medium leading-[0.95] tracking-[-0.02em] text-text">
               <span className="hero-line block opacity-0">
                 <TextShimmer>People strategy</TextShimmer>
               </span>
               <span className="hero-line mt-1 block text-primary opacity-0">
                 that moves business forward.
               </span>
-            </p>
+            </h1>
 
-            <p className="hero-line mt-4 max-w-lg text-sm leading-relaxed text-text-muted opacity-0 sm:text-[15px]">
+            <p className="hero-line mt-5 max-w-lg text-sm leading-relaxed text-text-muted opacity-0 sm:text-[15px]">
               Organizational development, engagement systems, and talent pipelines — designed
               for multinational standards of clarity, culture, and measurable outcomes.
             </p>
@@ -139,6 +122,7 @@ export function Hero() {
               <a
                 href={profile.emailHref}
                 data-anime-hover
+                data-testid="hire-me"
                 className="hero-cta group inline-flex min-h-12 items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-bg transition hover:bg-primary-deep opacity-0"
               >
                 Hire me
@@ -148,6 +132,7 @@ export function Hero() {
                 href={profile.resumeUrl}
                 download
                 data-anime-hover
+                data-testid="full-resume"
                 className="hero-cta inline-flex min-h-12 items-center gap-2 rounded-full border border-glass-border bg-glass px-5 py-3.5 text-sm font-semibold text-text backdrop-blur-md transition hover:border-primary/45 opacity-0"
               >
                 <Download className="h-4 w-4" />
@@ -163,19 +148,22 @@ export function Hero() {
             </div>
           </div>
 
-          <aside className="hero-panel glass-panel rounded-[1.5rem] p-5 opacity-0 sm:rounded-[2rem] sm:p-6 md:p-8">
-            <p className="font-brand text-3xl tracking-tight text-text sm:text-4xl">
-              {profile.name}
-            </p>
-            <p className="mt-2 text-sm text-primary">{profile.title}</p>
-            <p className="mt-1 text-sm text-text-muted">{profile.subtitle}</p>
-            <p className="mt-5 text-sm leading-relaxed text-text-muted sm:mt-6 sm:text-[15px]">
-              {profile.summary}
-            </p>
-            <p className="mt-5 inline-flex items-center gap-2 text-sm text-text sm:mt-6">
-              <MapPin className="h-4 w-4 shrink-0 text-secondary-soft" />
-              {profile.location}
-            </p>
+          <aside className="hero-panel glass-panel overflow-hidden rounded-[1.5rem] opacity-0 sm:rounded-[2rem]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[3/4]">
+              <img
+                src={profile.portraitClose}
+                alt="Professional portrait"
+                className="h-full w-full object-cover object-top grayscale"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/20 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+                <p className="text-sm text-primary">{profile.title}</p>
+                <p className="mt-1 text-sm text-text-muted">{profile.subtitle}</p>
+                <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-text/90">
+                  {profile.summary}
+                </p>
+              </div>
+            </div>
           </aside>
         </div>
 

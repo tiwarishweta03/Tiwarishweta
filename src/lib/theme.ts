@@ -21,7 +21,7 @@ export function applyTheme(theme: Theme) {
   document.documentElement.classList.toggle('light', theme === 'light')
   const meta = document.querySelector('meta[name="theme-color"]')
   if (meta) {
-    meta.setAttribute('content', theme === 'light' ? '#eef1f6' : '#0b0a09')
+    meta.setAttribute('content', theme === 'light' ? '#f7f8fa' : '#1a2332')
   }
   try {
     localStorage.setItem(THEME_STORAGE_KEY, theme)
