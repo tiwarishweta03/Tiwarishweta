@@ -1,7 +1,7 @@
 import { TextShimmer } from '@/components/TextShimmer'
 import { profile } from '@/data/profile'
 import { createTimeline, prefersReducedMotion, stagger } from '@/lib/anime'
-import { ArrowUpRight, Download } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 
 export function Hero() {
